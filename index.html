@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
+    <script src="GoogleMail.js"></script>
+    <script src="GoogleMaps.js"></script>
+    <script src="Authorize.js"></script>
+    <script src="https://apis.google.com/js/client.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAU8O5cG3JSz9rcfo-HvYS8T8UNw7up8jI"></script>
+    <style>
+        html,
+        body {
+            width: 500px;
+            height: 500px;
+        }
+        
+        #map {
+            height: 500px;
+            width: 500px;
+        }
+        
+        #authorize-div {
+            float: left;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="authorize-div">
+        <!--http://stackoverflow.com/questions/14184956/async-google-maps-api-v3-undefined-is-not-a-function-->
+        <span>Authorize access to Gmail API</span>
+        <!--Button for the user to click to initiate auth sequence -->
+        <button id="authorize-button" onclick="authorize.handleAuthClick(event)">
+            Authorizebutton
+        </button>
+        <p>läser inte in måste fixa authorize div , texten kommer innan event, det blir error om jag har callback funktionen inkluderat </p>
+    </div>
+    <div id="map"></div>
+    <pre id="output"></pre>
+</body>
+
+</html>
